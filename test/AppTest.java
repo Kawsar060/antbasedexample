@@ -1,3 +1,4 @@
+package junitreportgeneration;
 import junit.framework.*;
 
 public class AppTest extends TestCase {
