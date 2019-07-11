@@ -5,7 +5,7 @@ public class AppTest extends TestCase {
     	
     	App junit = new App();
 		int result = junit.add(100, 200);
-		assertEquals(300, result);
+		assertEquals(301, result);
     }
 
    
