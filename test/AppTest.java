@@ -1,6 +1,3 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import InitialHello.MyJUnitClass;
 import junit.framework.*;
 
 public class AppTest extends TestCase {
