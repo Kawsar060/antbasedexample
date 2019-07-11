@@ -1,8 +1,21 @@
 import java.util.*;
-package InitialHello;
 
 public class App {
-	public int add (int a,int b) {
-			return a+b;
-			}
-			}
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+
+    public boolean thisCausesFindBugWarnings(String s) {
+        return "abc".equals(s);
+    }
+
+    public void thisCreatesCompilerWarnings() {
+        List a = new ArrayList();
+        a.add("foo");
+    }
+
+    // we'll be testing this method from tests
+    public int add(int x, int y) {
+        return x+y;
+    }
+}

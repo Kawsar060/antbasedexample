@@ -1,16 +1,11 @@
-package InitialHello;
+import junit.framework.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+public class AppTest extends TestCase {
+    public void test1() {
+    }
 
-import org.junit.jupiter.api.Test;
-
-class AddTest {
-
-	@Test
-		void Addtest() {
-				MyJUnitClass junit = new MyJUnitClass();
-						int result = junit.add(100, 200);
-								assertEquals(301, result);
-									}
-
-									}
+    public void test2() {
+        // fail("test failed!");
+    }
+}
+© 2019 GitHub, Inc.
