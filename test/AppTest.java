@@ -13,4 +13,3 @@ public class AppTest extends TestCase {
 
    
 }
-© 2019 GitHub, Inc.
