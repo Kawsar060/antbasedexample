@@ -11,7 +11,7 @@
   </target>
   <target name="test" depends="compile">
     <mkdir dir="build/test-classes"/>
-    <javac srcdir="test" destdir="build/test-classes" debug="on" outfile="reports/result">
+    <javac srcdir="test" destdir="build/test-classes" debug="on">
       <classpath>
         <pathelement path="build/classes"/>
         <fileset dir="lib" includes="*.jar"/>
@@ -19,7 +19,7 @@
     </javac>
 
     <mkdir dir="build/test-reports"/>
-    <junit printsummary="true">
+    <junit printsummary="true" outfile="reports/result">
       <classpath>
         <pathelement path="build/test-classes"/>
         <pathelement path="build/classes"/>
