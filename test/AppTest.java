@@ -1,6 +1,6 @@
 import junit.framework.*;
 
-public class AppTest {
+public class AppTest extends TestCase {
     public void test1() {
     	
     	App junit = new App();
