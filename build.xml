@@ -9,30 +9,33 @@
       <fileset dir="build/classes"/>
     </jar>
   </target>
-  <target name="test" depends="compile">
-    <mkdir dir="build/test-classes"/>
-    <javac srcdir="test" destdir="build/test-classes" debug="on">
-      <classpath>
-        <pathelement path="build/classes"/>
-        <fileset dir="lib" includes="*.jar"/>
-      </classpath>
-    </javac>
+  
+	<target name="test" depends="compile">
+	    <mkdir dir="build/test-classes"/>
+	    <javac srcdir="test" destdir="build/test-classes" debug="on">
+	      <classpath>
+	        <pathelement path="build/classes"/>
+	        <fileset dir="lib" includes="*.jar"/>
+	      </classpath>
+	    </javac>
 
-    <mkdir dir="build/test-reports"/>
-    <junit printsummary="true">
-      <classpath>
-        <pathelement path="build/test-classes"/>
-        <pathelement path="build/classes"/>
-        <fileset dir="lib" includes="*.jar"/>
-      </classpath>
-    	<test name="com.mkyong.test.AppTest" outfile="reports/result">
-    		<formatter type="xml"/>
-    	</test>
-      <batchtest todir="build/test-reports">
-        <fileset dir="test" includes="**/*Test.java"/>
-      </batchtest>
-    </junit>
-  </target>
+	    <mkdir dir="build/test-reports"/>
+	    <junit printsummary="true" haltonfailure="no">
+	      <classpath>
+	        <pathelement path="build/test-classes"/>
+	        <pathelement path="build/classes"/>
+	        <fileset dir="lib" includes="*.jar"/>
+	      </classpath>
+	    	<formatter type="xml"/>
+	      <batchtest fork="yes" todir="build/test-reports">
+	        <fileset dir="test"> 
+				<include name="**/*Test.java"/>
+			</fileset>
+		  </batchtest>
+	    </junit>
+	  </target>
+	
+	
   <target name="javadoc">
     <mkdir dir="build/javadoc"/>
     <javadoc destdir="build/javadoc">
