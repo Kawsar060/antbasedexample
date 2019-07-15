@@ -11,7 +11,7 @@
   </target>
   <target name="test" depends="compile">
     <mkdir dir="build/test-classes"/>
-    <javac srcdir="test" destdir="build/test-classes" debug="on">
+    <javac srcdir="test" destdir="build/test-classes" debug="on" haltonfailure="no"  outfile="reports/result">
       <classpath>
         <pathelement path="build/classes"/>
         <fileset dir="lib" includes="*.jar"/>
@@ -25,9 +25,7 @@
         <pathelement path="build/classes"/>
         <fileset dir="lib" includes="*.jar"/>
       </classpath>
-    	<test name="com.areyes1.jgc.junit.assertequals.AppTest" haltonfailure="no"  outfile="result">
     		<formatter type="xml"/>
-    	</test>
       <batchtest todir="build/test-reports">
         <fileset dir="test" includes="**/*Test.java"/>
       </batchtest>
