@@ -25,7 +25,7 @@
         <pathelement path="build/classes"/>
         <fileset dir="lib" includes="*.jar"/>
       </classpath>
-    	<test name="com.areyes1.jgc.junit.assertequals.JUnitAssertEqualsExample" haltonfailure="no"  outfile="result">
+    	<test name="com.areyes1.jgc.junit.assertequals.JUnitAssertEquals" haltonfailure="no"  outfile="result">
     		<formatter type="xml"/>
     	</test>
       <batchtest todir="build/test-reports">
