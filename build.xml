@@ -25,7 +25,7 @@
         <pathelement path="build/classes"/>
         <fileset dir="lib" includes="*.jar"/>
       </classpath>
-    	<test name="junit.assertequals.JUnitAssertEquals" outfile="reports/result">
+    	<test name="com.mkyong.test.AppTest" outfile="reports/result">
     		<formatter type="xml"/>
     	</test>
       <batchtest todir="build/test-reports">
