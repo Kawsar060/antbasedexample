@@ -11,7 +11,7 @@
   </target>
   <target name="test" depends="compile">
     <mkdir dir="build/test-classes"/>
-    <javac srcdir="test" destdir="build/test-classes" debug="on" haltonfailure="no"  outfile="reports/result">
+    <javac srcdir="test" destdir="build/test-classes" debug="on" outfile="reports/result">
       <classpath>
         <pathelement path="build/classes"/>
         <fileset dir="lib" includes="*.jar"/>
